@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div>
+    <header>
+      <nav>
+        <a
+          href="https://www.wikipedia.org/"
+        >
+          Wikipedia
+        </a>
+      </nav>
+    </header>
+    <main>
+      <h1>
+        List of Names
+      </h1>
+      <div
+        class="list-group"
+      />
+    </main>
+    <footer>
+      Footer placeholder
+    </footer>
+  </div>
+</div>
+`;
