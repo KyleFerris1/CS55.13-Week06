@@ -1,5 +1,5 @@
-import Layout from '../components/layout';
-import { getAllIds, getData } from '../lib/data';
+import Layout from '../../components/layout';
+import { getAllIds, getData } from '../../lib/data-firebase';
 
 export async function getStaticProps({ params }){
   const itemData = await getData(params.id);
@@ -11,7 +11,10 @@ export async function getStaticProps({ params }){
 }
 
 export async function getStaticPaths(){
-  const paths = getAllIds();
+  const tempPaths = await getAllIds();
+
+  const paths = tempPaths.map(item => ({ params: {id: item.id} }));
+  
   return{
     paths,
     fallback: false
